@@ -56,7 +56,7 @@ jobs:
       - name: Download JAR artifact
         uses: actions/download-artifact@v4
         with:
-          name: lambda-jar
+          name: LambdaAutenticacao-1.0.jar
           path: target/          
 
       - name: Instalar Terraform
