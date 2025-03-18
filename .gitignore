@@ -1,8 +1,13 @@
-HELP.md
+# Ignorar a pasta target/ exceto para src/main e src/test
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+
+# Exceção para o diretório .github/workflows
+!.github/
+!.github/workflows/
+!.github/workflows/**
 
 ### STS ###
 .apt_generated
@@ -34,4 +39,3 @@ build/
 
 # SAM default build folder
 .aws-sam/
-
