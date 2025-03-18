@@ -39,18 +39,10 @@ jobs:
           echo "Listing files in target directory:"
           ls -al target/
 
-      - name: Rename JAR to LambdaAutenticacao-1.0.jar
-        run: |
-          cd HelloWorldFunction
-          ls -l target/
-          echo "Files found in target directory:" >> target_files.log
-          ls target/ >> target_files.log
-          cat target_files.log  # Display the log file contents to the console
-
       - name: Upload JAR artifact
         uses: actions/upload-artifact@v4
         with:
-          name: lambda-jar
+          name: LambdaAutenticacao-1.0.jar
           path: target/LambdaAutenticacao-1.0.jar
 
       - name: Configurar credenciais da AWS
