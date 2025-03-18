@@ -39,7 +39,9 @@ jobs:
           ls -l target/
 
       - name: Rename JAR to LambdaAutenticacao-1.0.jar
-        run: mv target/*.jar target/LambdaAutenticacao-1.0.jar
+        run: |
+          cd HelloWorldFunction
+          mv target/*.jar target/LambdaAutenticacao-1.0.jar
 
       - name: Upload JAR artifact
         uses: actions/upload-artifact@v4
