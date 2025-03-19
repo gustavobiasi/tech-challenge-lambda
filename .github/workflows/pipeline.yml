@@ -74,10 +74,14 @@ jobs:
           fi   
 
       - name: Inicializar Terraform
-        run: terraform init
+        run: |
+          cd HelloWorldFunction
+          terraform init
 
       - name: Validar Terraform
-        run: terraform validate
+        run: |
+          cd HelloWorldFunction
+          terraform validate
 
       - name: Import Lambda if it exists
         if: steps.check_lambda.outputs.lambda_exists == 'true'
