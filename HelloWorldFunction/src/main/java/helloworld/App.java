@@ -21,7 +21,7 @@ public class App implements RequestHandler<Request, Response> {
     @Override
     public Response handleRequest(Request request, Context context) {
         if (request == null || Strings.isEmpty(request.getCpfCnpj()))
-            return new Response(JsonParser.toJson(new ErrorResponse("Campo cpfCnpj está nulo ou inválido")), 400);
+            return new Response(JsonParser.toJson(new ErrorResponse("Campo cpfCnpj está nulo ou inválido!")), 400);
 
         var c = new Connections().connect();
         var clienteDTO = new ClienteService(c).getCliente(request.getCpfCnpj());
