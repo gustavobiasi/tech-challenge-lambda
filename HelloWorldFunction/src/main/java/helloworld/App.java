@@ -29,7 +29,6 @@ public class App implements RequestHandler<Request, Response> {
             return new Response(JsonParser.toJson(new ErrorResponse("Cliente não encontrado")), 400);
 
         var response = new TokenService(clienteDTO).createToken(clienteDTO);
-
         return new Response(JsonParser.toJson(response));
     }
 
